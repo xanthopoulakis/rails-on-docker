@@ -3,6 +3,7 @@ An intoduction to creating and running a Ruby on Rails service API on Docker. Fo
 # Prerequisites
   - Make sure [Docker](https://docs.docker.com/docker-for-windows/install/) is installed and running on your machine
   - Use the IDE of you preference, such as [Sublime Text](https://www.sublimetext.com/) or [Visual Studio Code](https://code.visualstudio.com/) or [Atom](https://atom.io/) or [RubyMine](https://www.jetbrains.com/ruby/)
+>If you are using Docker Machine, then docker-machine ip MACHINE_VM returns the Docker host IP address, to which you can append the port (<Docker-Host-IP>:3000)
 # Getting Started
 Open the command line console in your machine (or use [Git Bash](https://gitforwindows.org/)) and follow the steps below
 Checkout:
@@ -17,4 +18,15 @@ create the project
 ```sh
 $ docker-compose run rails-service rails new . --api -T
 ```
- 
+build the project
+```sh
+$ docker-compose build rails-service
+```
+run the project
+```sh
+$ docker-compose up rails-service
+```
+run the rails console
+```sh
+$ docker-compose run rails-service rails c
+```
