@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  rails-service:
+    build:
+      context: ./rails-service
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 80 -b '0.0.0.0'
+    volumes:
+      - ./rails-service:/rails-service
+      - type: tmpfs
+        target: /rails-service/tmp/pids/
+    ports:
+      - "3000:80"
