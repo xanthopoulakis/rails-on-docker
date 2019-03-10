@@ -3,7 +3,6 @@ class CreateOperations < ActiveRecord::Migration[5.2]
     create_table :operations, id: false do |t|
       t.string :id, primary_key: true, null: false
       t.string :type, null: false
-      t.string :title, null: false
       t.json :parameters, default: {}
       t.json :input, default: {}
       t.json :output, default: {}

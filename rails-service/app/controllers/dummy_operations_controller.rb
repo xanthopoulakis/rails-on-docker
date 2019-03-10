@@ -22,7 +22,7 @@ class DummyOperationsController < ApplicationController
 
   def dummy_operation_params
     # whitelist params
-    params.require(:dummy_operation).permit!
+    params.require(:dummy_operation).permit(:id, parameters: {}, input: {})
   end
 
   def set_dummy_operation

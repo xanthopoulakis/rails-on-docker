@@ -1,8 +1,5 @@
 class DummyOperation < Operation
 
-  cattr_reader :description, default: 'this is a dummy operation'
-  before_save :process
-
   def process
     #### YOUR CODE GOES HERE!!
     self.output = self.input.clone

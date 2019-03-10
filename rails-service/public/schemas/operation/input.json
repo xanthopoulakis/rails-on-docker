@@ -36,23 +36,29 @@
         },
         "parentId": {
           "$id": "#/properties/waferMap/properties/parentId",
-          "type": "string",
-          "title": "The ParentId Schema",
-          "default": "",
-          "examples": [
-            "9bec5f90-2542-0137-1899-753014e79ca0"
-          ],
-          "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$"
+          "anyOf": [
+            {
+              "type": "string",
+              "title": "The ParentId Schema",
+              "default": "",
+              "examples": [
+                "9bec5f90-2542-0137-1899-753014e79ca0"
+              ],
+              "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "waferMetrologyStepId": {
           "$id": "#/properties/waferMap/properties/waferMetrologyStepId",
-          "type": "string",
+          "type": "number",
           "title": "The waferMetrologyStepId Schema",
-          "default": "",
+          "default": 0,
           "examples": [
-            "760"
-          ],
-          "pattern": "^[0-9]+$"
+            760
+          ]
         },
         "waferID": {
           "$id": "#/properties/waferMap/properties/waferID",
@@ -83,13 +89,12 @@
         },
         "exposedFieldsCount": {
           "$id": "#/properties/waferMap/properties/exposedFieldsCount",
-          "type": "string",
+          "type": "number",
           "title": "The Exposedfieldscount Schema",
-          "default": "",
+          "default": 0,
           "examples": [
-            "100"
-          ],
-          "pattern": "^[0-9]+$"
+            100
+          ]
         },
         "exposedFields": {
           "$id": "#/properties/waferMap/properties/exposedFields",
@@ -111,63 +116,57 @@
             "properties": {
               "id": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/id",
-                "type": "string",
+                "type": "number",
                 "title": "The Id Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "1"
-                ],
-                "pattern": "^[0-9]+$"
+                  1
+                ]
               },
               "width": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/width",
-                "type": "string",
+                "type": "number",
                 "title": "The Width Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "25.5"
-                ],
-                "pattern": "^[-+]?[0-9]*\.?[0-9]+$"
+                  25.5
+                ]
               },
               "height": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/height",
-                "type": "string",
+                "type": "number",
                 "title": "The Height Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "32.87856"
-                ],
-                "pattern": "^[-+]?[0-9]*\.?[0-9]+$"
+                  32.87856
+                ]
               },
               "diam": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/diam",
-                "type": "string",
+                "type": "number",
                 "title": "The Diam Schema",
                 "default": "",
                 "examples": [
-                  "300.0"
-                ],
-                "pattern": "^[-+]?[0-9]*\.?[0-9]+$"
+                  300.0
+                ]
               },
               "posX": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/posX",
-                "type": "string",
+                "type": "number",
                 "title": "The Posx Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "-45.8319"
-                ],
-                "pattern": "^[-+]?[0-9]*\.?[0-9]+$"
+                  -45.8319
+                ]
               },
               "posY": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/posY",
-                "type": "string",
+                "type": "number",
                 "title": "The Posy Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "-158.4791"
-                ],
-                "pattern": "^[-+]?[0-9]*\.?[0-9]+$"
+                  -158.4791
+                ]
               },
               "scan": {
                 "$id": "#/properties/waferMap/properties/exposedFields/items/properties/scan",
@@ -194,13 +193,12 @@
         },
         "waferPointsCount": {
           "$id": "#/properties/waferMap/properties/waferPointsCount",
-          "type": "string",
+          "type": "number",
           "title": "The Waferpointscount Schema",
-          "default": "",
+          "default": 0,
           "examples": [
-            "100"
-          ],
-          "pattern": "^[0-9]+$"
+            100
+          ]
         },
         "waferPoints": {
           "$id": "#/properties/waferMap/properties/waferPoints",
@@ -225,19 +223,18 @@
             "properties": {
               "id": {
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/id",
-                "type": "integer",
+                "type": "number",
                 "title": "The Id Schema",
-                "default": "",
+                "default": 0,
                 "examples": [
-                  "1"
-                ],
-                "pattern": "^[0-9]+$"
+                  1
+                ]
               },
               "cfx": {
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/cfx",
                 "type": "number",
                 "title": "The Cfx Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   -23.8
                 ]
@@ -246,7 +243,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/cfy",
                 "type": "number",
                 "title": "The Cfy Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   -128.4
                 ]
@@ -255,7 +252,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/ifx",
                 "type": "number",
                 "title": "The Ifx Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   -3.8
                 ]
@@ -264,7 +261,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/ify",
                 "type": "number",
                 "title": "The Ify Schema",
-                "default": 0.0,
+                "default": "",
                 "examples": [
                   -8.4
                 ]
@@ -273,7 +270,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/valX",
                 "type": "number",
                 "title": "The Valx Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   1.311
                 ]
@@ -282,7 +279,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/valY",
                 "type": "number",
                 "title": "The Valy Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   -7.349
                 ]
@@ -291,7 +288,7 @@
                 "$id": "#/properties/waferMap/properties/waferPoints/items/properties/val",
                 "type": "number",
                 "title": "The Val Schema",
-                "default": 0.0,
+                "default": 0,
                 "examples": [
                   7.46
                 ]

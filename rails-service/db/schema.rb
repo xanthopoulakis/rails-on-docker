@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2019_03_09_174130) do
 
   create_table "operations", id: :string, force: :cascade do |t|
     t.string "type", null: false
-    t.string "title", null: false
     t.json "parameters", default: {}
     t.json "input", default: {}
     t.json "output", default: {}
