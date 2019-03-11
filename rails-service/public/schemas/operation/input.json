@@ -102,7 +102,7 @@
           "title": "The Exposedfields Schema",
           "items": {
             "$id": "#/properties/waferMap/properties/exposedFields/items",
-            "type": {"anyOf": [{"type": "object"},{"type": "string"}]},
+            "type": "object",
             "title": "The Items Schema",
             "required": [
               "id",
@@ -206,7 +206,7 @@
           "title": "The Waferpoints Schema",
           "items": {
             "$id": "#/properties/waferMap/properties/waferPoints/items",
-            "type": {"anyOf": [{"type": "object"},{"type": "string"}]},
+            "type": "object",
             "title": "The Items Schema",
             "required": [
               "id",

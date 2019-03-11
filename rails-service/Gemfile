@@ -32,7 +32,10 @@ gem 'uuid'
 gem 'activerecord_json_validator'
 
 # Simple health check of Rails edge apps for use with Pingdom, NewRelic, EngineYard or uptime.openacs.org etc.
-gem 'health_check', '~> 3.0' 
+gem 'health_check', '~> 3.0'
+
+# Seamlessly adds a Swagger to Rails-based API's
+gem 'rswag'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -41,6 +44,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails-swagger'
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker'
 end
 
 group :development do
@@ -51,9 +57,7 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'faker'
   gem 'database_cleaner'
 end
 

@@ -1,0 +1,378 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/dummy_operations": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        },
+        "summary": "list dummy_operations"
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "description": "successful"
+          }
+        },
+        "parameters": [
+          {
+            "name": "dummy_operation",
+            "in": "body",
+            "schema": {
+              "definitions": {
+              },
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "$id": "http://example.com/root.json",
+              "type": "object",
+              "title": "The Root Schema",
+              "required": [
+                "id",
+                "parameters",
+                "input"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "example": "d7975520-2641-0137-795f-0eda98de4a52",
+                  "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$"
+                },
+                "parameters": {
+                  "$id": "#/properties/parameters",
+                  "type": "object",
+                  "title": "The Parameters Schema"
+                },
+                "input": {
+                  "$id": "#/properties/input",
+                  "type": "object",
+                  "title": "The Input Schema",
+                  "required": [
+                    "waferMap"
+                  ],
+                  "properties": {
+                    "waferMap": {
+                      "$id": "#/properties/waferMap",
+                      "type": "object",
+                      "title": "The Wafermap Schema",
+                      "required": [
+                        "id",
+                        "parentId",
+                        "waferMetrologyStepId",
+                        "waferID",
+                        "valType",
+                        "exposedFieldsCount",
+                        "exposedFields",
+                        "waferPointsCount",
+                        "waferPoints"
+                      ],
+                      "properties": {
+                        "id": {
+                          "$id": "#/properties/waferMap/properties/id",
+                          "type": "string",
+                          "title": "The Id Schema",
+                          "default": "",
+                          "example": "d7975520-2641-0137-795f-0eda98de4a52",
+                          "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$"
+                        },
+                        "parentId": {
+                          "$id": "#/properties/waferMap/properties/parentId",
+                          "type": "string",
+                          "title": "The ParentId Schema",
+                          "default": null,
+                          "example": null,
+                          "pattern": "^(.*)$"
+                        },
+                        "waferMetrologyStepId": {
+                          "$id": "#/properties/waferMap/properties/waferMetrologyStepId",
+                          "type": "number",
+                          "title": "The waferMetrologyStepId Schema",
+                          "default": 0,
+                          "example": 760
+                        },
+                        "waferID": {
+                          "$id": "#/properties/waferMap/properties/waferID",
+                          "type": "string",
+                          "title": "The Waferid Schema",
+                          "default": "",
+                          "example": "N99A58.03",
+                          "pattern": "^(.*)$"
+                        },
+                        "valType": {
+                          "$id": "#/properties/waferMap/properties/valType",
+                          "type": "string",
+                          "title": "The Valtype Schema",
+                          "default": "",
+                          "examples": [
+                            "OverlayRaw"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "exposedFieldsCount": {
+                          "$id": "#/properties/waferMap/properties/exposedFieldsCount",
+                          "type": "number",
+                          "title": "The Exposedfieldscount Schema",
+                          "default": 0,
+                          "examples": [
+                            100
+                          ]
+                        },
+                        "exposedFields": {
+                          "$id": "#/properties/waferMap/properties/exposedFields",
+                          "type": "array",
+                          "title": "The Exposedfields Schema",
+                          "items": {
+                            "$id": "#/properties/waferMap/properties/exposedFields/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "required": [
+                              "id",
+                              "width",
+                              "height",
+                              "diam",
+                              "posX",
+                              "posY",
+                              "scan"
+                            ],
+                            "properties": {
+                              "id": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/id",
+                                "type": "number",
+                                "title": "The Id Schema",
+                                "default": 0,
+                                "examples": [
+                                  1
+                                ]
+                              },
+                              "width": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/width",
+                                "type": "number",
+                                "title": "The Width Schema",
+                                "default": 0,
+                                "examples": [
+                                  25.5
+                                ]
+                              },
+                              "height": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/height",
+                                "type": "number",
+                                "title": "The Height Schema",
+                                "default": 0,
+                                "examples": [
+                                  32.87856
+                                ]
+                              },
+                              "diam": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/diam",
+                                "type": "number",
+                                "title": "The Diam Schema",
+                                "default": "",
+                                "examples": [
+                                  300.0
+                                ]
+                              },
+                              "posX": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/posX",
+                                "type": "number",
+                                "title": "The Posx Schema",
+                                "default": 0,
+                                "examples": [
+                                  -45.8319
+                                ]
+                              },
+                              "posY": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/posY",
+                                "type": "number",
+                                "title": "The Posy Schema",
+                                "default": 0,
+                                "examples": [
+                                  -158.4791
+                                ]
+                              },
+                              "scan": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/scan",
+                                "type": "string",
+                                "title": "The Scan Schema",
+                                "default": "",
+                                "examples": [
+                                  "Upwards"
+                                ],
+                                "pattern": "^(.*)$"
+                              },
+                              "scanPath": {
+                                "$id": "#/properties/waferMap/properties/exposedFields/items/properties/scanPath",
+                                "type": "string",
+                                "title": "The Scanpath Schema",
+                                "default": "",
+                                "examples": [
+                                  "Left"
+                                ],
+                                "pattern": "^(.*)$"
+                              }
+                            }
+                          }
+                        },
+                        "waferPointsCount": {
+                          "$id": "#/properties/waferMap/properties/waferPointsCount",
+                          "type": "number",
+                          "title": "The Waferpointscount Schema",
+                          "default": 0,
+                          "examples": [
+                            100
+                          ]
+                        },
+                        "waferPoints": {
+                          "$id": "#/properties/waferMap/properties/waferPoints",
+                          "type": "array",
+                          "title": "The Waferpoints Schema",
+                          "items": {
+                            "$id": "#/properties/waferMap/properties/waferPoints/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "required": [
+                              "id",
+                              "cfx",
+                              "cfy",
+                              "ifx",
+                              "ify",
+                              "valX",
+                              "valY",
+                              "val",
+                              "validX",
+                              "validY"
+                            ],
+                            "properties": {
+                              "id": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/id",
+                                "type": "number",
+                                "title": "The Id Schema",
+                                "default": 0,
+                                "examples": [
+                                  1
+                                ]
+                              },
+                              "cfx": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/cfx",
+                                "type": "number",
+                                "title": "The Cfx Schema",
+                                "default": 0,
+                                "examples": [
+                                  -23.8
+                                ]
+                              },
+                              "cfy": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/cfy",
+                                "type": "number",
+                                "title": "The Cfy Schema",
+                                "default": 0,
+                                "examples": [
+                                  -128.4
+                                ]
+                              },
+                              "ifx": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/ifx",
+                                "type": "number",
+                                "title": "The Ifx Schema",
+                                "default": 0,
+                                "examples": [
+                                  -3.8
+                                ]
+                              },
+                              "ify": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/ify",
+                                "type": "number",
+                                "title": "The Ify Schema",
+                                "default": "",
+                                "examples": [
+                                  -8.4
+                                ]
+                              },
+                              "valX": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/valX",
+                                "type": "number",
+                                "title": "The Valx Schema",
+                                "default": 0,
+                                "examples": [
+                                  1.311
+                                ]
+                              },
+                              "valY": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/valY",
+                                "type": "number",
+                                "title": "The Valy Schema",
+                                "default": 0,
+                                "examples": [
+                                  -7.349
+                                ]
+                              },
+                              "val": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/val",
+                                "type": "number",
+                                "title": "The Val Schema",
+                                "default": 0,
+                                "examples": [
+                                  7.46
+                                ]
+                              },
+                              "validX": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/validX",
+                                "type": "boolean",
+                                "title": "The Validx Schema",
+                                "default": false,
+                                "examples": [
+                                  true
+                                ]
+                              },
+                              "validY": {
+                                "$id": "#/properties/waferMap/properties/waferPoints/items/properties/validY",
+                                "type": "boolean",
+                                "title": "The Validy Schema",
+                                "default": false,
+                                "examples": [
+                                  false
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "summary": "create dummy_operation",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/dummy_operations/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        },
+        "summary": "show dummy_operation"
+      }
+    }
+  }
+}
