@@ -25,11 +25,14 @@ gem 'puma', '~> 3.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-#Generates universally unique identifiers (UUIDs) for use in distributed applications. Based on RFC 4122.
+# Generates universally unique identifiers (UUIDs) for use in distributed applications. Based on RFC 4122.
 gem 'uuid'
 
-#ActiveRecord::JSONValidator makes it easy to validate JSON attributes against a JSON schema. 
+# ActiveRecord::JSONValidator makes it easy to validate JSON attributes against a JSON schema. 
 gem 'activerecord_json_validator'
+
+# Simple health check of Rails edge apps for use with Pingdom, NewRelic, EngineYard or uptime.openacs.org etc.
+gem 'health_check', '~> 3.0' 
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
