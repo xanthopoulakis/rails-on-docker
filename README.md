@@ -31,8 +31,7 @@ run the project
 ```sh
 $ docker-compose up rails-service
 ```
-open google chrome and navigate to (http://localhost:3000)
-run the rails console
+open google chrome and navigate to (http://localhost:3000). To run the rails console do
 ```sh
 $ docker-compose run rails-service rails c
 ```
