@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :dummy_operations, only: [:index, :show, :create]
 
+  resources :filter_operations, only: [:index, :show, :create]
 end

@@ -37,6 +37,9 @@ gem 'health_check', '~> 3.0'
 # Seamlessly adds a Swagger to Rails-based API's
 gem 'rswag'
 
+# Descriptive statistics
+gem 'descriptive_statistics', '~> 2.4.0', :require => 'descriptive_statistics/safe'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
