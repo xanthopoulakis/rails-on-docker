@@ -14,18 +14,24 @@ enter the folder
 ```sh
 $ cd rails-on-docker
 ```
-create the project
+Switch to template:
 ```sh
-$ docker-compose run rails-service rails new . --api -T
+$ git fetch
+$ git checkout template
 ```
 build the project
 ```sh
 $ docker-compose build rails-service
 ```
+setup the database
+```sh
+$ docker-compose run rails-service rake db:setup
+```
 run the project
 ```sh
 $ docker-compose up rails-service
 ```
+open google chrome and navigate to (http://localhost:3000)
 run the rails console
 ```sh
 $ docker-compose run rails-service rails c
