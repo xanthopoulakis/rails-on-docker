@@ -1,0 +1,3 @@
+class LotStep < ApplicationRecord
+
+end

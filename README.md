@@ -14,10 +14,6 @@ enter the folder
 ```sh
 $ cd rails-on-docker
 ```
-create the project
-```sh
-$ docker-compose run rails-service rails new . --api -T
-```
 build the project
 ```sh
 $ docker-compose build rails-service
